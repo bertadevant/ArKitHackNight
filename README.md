@@ -19,7 +19,15 @@ Following [my blog post](https://www.novoda.com/blog/getting-started-with-arkit/
 
 - Add a model on a touch location with lights, shadows and animations imported from the model file
 
-We will have a demo and ready to show app after every point and we will code along and explain every part for beginners. 
+We will have a demo and ready to show app after every point and we will code along and explain every part for beginners.
+
+This are the models we will be using on the demo:
+
+- [R2-D2 by Eric Finn](https://poly.google.com/view/dPgkqmBDqgH)
+- Donuts by Google [here](https://poly.google.com/view/8KY9R5UDV_M), [here](https://poly.google.com/view/7_-6fUJOawi), [here](https://poly.google.com/view/7_-6fUJOawi), [here](https://poly.google.com/view/6LSB0OZK8I7), [here](https://poly.google.com/view/dNEahRV2rPR), [here](https://poly.google.com/view/bn3ArZAOcpo)
+- [TARS by Chris Basha](https://www.novoda.com/blog/designing-for-ar-with-arkit/)
+
+You can download your own and convert the `.obj` file into `.scn` directly on XCode
 
 Learn More 🤓:
 ------
