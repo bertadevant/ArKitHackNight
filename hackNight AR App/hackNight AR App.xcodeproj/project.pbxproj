@@ -7,19 +7,25 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4C32E4BE203C81D900D40810 /* StarWarsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C32E4BD203C81D900D40810 /* StarWarsViewController.swift */; };
+		4C32E4C0203C81E800D40810 /* DonutsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C32E4BF203C81E800D40810 /* DonutsViewController.swift */; };
+		4C32E4C2203C81F500D40810 /* EarthMoonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C32E4C1203C81F500D40810 /* EarthMoonViewController.swift */; };
 		4CF2968B203AE2B2001F9E59 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CF2968A203AE2B2001F9E59 /* AppDelegate.swift */; };
 		4CF2968D203AE2B2001F9E59 /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = 4CF2968C203AE2B2001F9E59 /* art.scnassets */; };
-		4CF2968F203AE2B2001F9E59 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CF2968E203AE2B2001F9E59 /* ViewController.swift */; };
+		4CF2968F203AE2B2001F9E59 /* InitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CF2968E203AE2B2001F9E59 /* InitialViewController.swift */; };
 		4CF29692203AE2B2001F9E59 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4CF29690203AE2B2001F9E59 /* Main.storyboard */; };
 		4CF29694203AE2B2001F9E59 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4CF29693203AE2B2001F9E59 /* Assets.xcassets */; };
 		4CF29697203AE2B2001F9E59 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4CF29695203AE2B2001F9E59 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4C32E4BD203C81D900D40810 /* StarWarsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarWarsViewController.swift; sourceTree = "<group>"; };
+		4C32E4BF203C81E800D40810 /* DonutsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonutsViewController.swift; sourceTree = "<group>"; };
+		4C32E4C1203C81F500D40810 /* EarthMoonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EarthMoonViewController.swift; sourceTree = "<group>"; };
 		4CF29687203AE2B2001F9E59 /* hackNight AR App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "hackNight AR App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4CF2968A203AE2B2001F9E59 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4CF2968C203AE2B2001F9E59 /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
-		4CF2968E203AE2B2001F9E59 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		4CF2968E203AE2B2001F9E59 /* InitialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialViewController.swift; sourceTree = "<group>"; };
 		4CF29691203AE2B2001F9E59 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4CF29693203AE2B2001F9E59 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4CF29696203AE2B2001F9E59 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -37,6 +43,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4C32E4BC203C81C000D40810 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				4C32E4BD203C81D900D40810 /* StarWarsViewController.swift */,
+				4C32E4BF203C81E800D40810 /* DonutsViewController.swift */,
+				4C32E4C1203C81F500D40810 /* EarthMoonViewController.swift */,
+				4CF2968E203AE2B2001F9E59 /* InitialViewController.swift */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
 		4CF2967E203AE2B2001F9E59 = {
 			isa = PBXGroup;
 			children = (
@@ -56,9 +73,9 @@
 		4CF29689203AE2B2001F9E59 /* hackNight AR App */ = {
 			isa = PBXGroup;
 			children = (
+				4C32E4BC203C81C000D40810 /* View Controllers */,
 				4CF2968A203AE2B2001F9E59 /* AppDelegate.swift */,
 				4CF2968C203AE2B2001F9E59 /* art.scnassets */,
-				4CF2968E203AE2B2001F9E59 /* ViewController.swift */,
 				4CF29690203AE2B2001F9E59 /* Main.storyboard */,
 				4CF29693203AE2B2001F9E59 /* Assets.xcassets */,
 				4CF29695203AE2B2001F9E59 /* LaunchScreen.storyboard */,
@@ -140,7 +157,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4CF2968F203AE2B2001F9E59 /* ViewController.swift in Sources */,
+				4C32E4BE203C81D900D40810 /* StarWarsViewController.swift in Sources */,
+				4C32E4C2203C81F500D40810 /* EarthMoonViewController.swift in Sources */,
+				4C32E4C0203C81E800D40810 /* DonutsViewController.swift in Sources */,
+				4CF2968F203AE2B2001F9E59 /* InitialViewController.swift in Sources */,
 				4CF2968B203AE2B2001F9E59 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
