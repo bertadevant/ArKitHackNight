@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="xJl-oZ-Tf3">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Initial View Controller-->
+        <scene sceneID="tXr-a1-R10">
+            <objects>
+                <viewController id="BV1-FR-VrT" customClass="InitialViewController" customModule="hackNight_AR_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="jyu-By-ikj">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="CpG-p2-il7">
+                                <rect key="frame" x="65.5" y="148.5" width="244" height="434"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0qm-JG-mhA">
+                                        <rect key="frame" x="0.0" y="0.0" width="244" height="111.5"/>
+                                        <state key="normal" title="Star Wars"/>
+                                        <connections>
+                                            <segue destination="bX7-4h-cPQ" kind="show" id="L9d-ce-pbU"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pCz-nl-pzm">
+                                        <rect key="frame" x="0.0" y="161.5" width="244" height="111"/>
+                                        <state key="normal" title="Donuts"/>
+                                        <connections>
+                                            <segue destination="Vhp-zN-yVq" kind="show" id="T5i-2q-MqD"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HNP-XN-94E">
+                                        <rect key="frame" x="0.0" y="322.5" width="244" height="111.5"/>
+                                        <state key="normal" title="Earth and Moon"/>
+                                        <connections>
+                                            <segue destination="yrT-p7-f16" kind="show" id="JAg-fJ-XgQ"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="CpG-p2-il7" firstAttribute="width" secondItem="jyu-By-ikj" secondAttribute="width" multiplier="0.65" id="Mm0-2C-v4L"/>
+                            <constraint firstItem="CpG-p2-il7" firstAttribute="centerY" secondItem="NAi-N7-LpS" secondAttribute="centerY" id="ebe-Wc-hSO"/>
+                            <constraint firstItem="CpG-p2-il7" firstAttribute="height" secondItem="jyu-By-ikj" secondAttribute="height" multiplier="0.65" id="nhd-4v-SHL"/>
+                            <constraint firstItem="CpG-p2-il7" firstAttribute="centerX" secondItem="NAi-N7-LpS" secondAttribute="centerX" id="vgc-Cb-h3G"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="NAi-N7-LpS"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="WnA-gL-4M4"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SZV-WD-TEh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="802" y="150"/>
+        </scene>
+        <!--Earth Moon View Controller-->
+        <scene sceneID="snT-th-DVP">
+            <objects>
+                <viewController id="yrT-p7-f16" customClass="EarthMoonViewController" customModule="hackNight_AR_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="XTB-1N-bIO">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bNW-oe-zvc">
+                                <rect key="frame" x="67" y="181" width="240" height="128"/>
+                            </arscnView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="bNW-oe-zvc" firstAttribute="width" secondItem="XTB-1N-bIO" secondAttribute="width" id="8Rz-C2-W0k"/>
+                            <constraint firstItem="bNW-oe-zvc" firstAttribute="centerX" secondItem="07d-9l-SkV" secondAttribute="centerX" id="KLj-pT-Usj"/>
+                            <constraint firstItem="bNW-oe-zvc" firstAttribute="centerY" secondItem="07d-9l-SkV" secondAttribute="centerY" id="Ziy-Op-3vw"/>
+                            <constraint firstItem="bNW-oe-zvc" firstAttribute="height" secondItem="XTB-1N-bIO" secondAttribute="height" id="hn2-1g-0Rk"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="07d-9l-SkV"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="JKR-2e-kwk"/>
+                    <connections>
+                        <outlet property="sceneView" destination="bNW-oe-zvc" id="yof-Wx-dik"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DVi-Ay-dkU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2084" y="1055"/>
+        </scene>
+        <!--Initial View Controller-->
+        <scene sceneID="Np4-Y5-2uz">
+            <objects>
+                <navigationController title="Initial View Controller" id="xJl-oZ-Tf3" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="hGS-ck-LXr">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BV1-FR-VrT" kind="relationship" relationship="rootViewController" id="Tto-Mu-vUI"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Hsf-CO-JrG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-262" y="150"/>
+        </scene>
+        <!--Donuts View Controller-->
+        <scene sceneID="lLA-it-nhl">
+            <objects>
+                <viewController id="Vhp-zN-yVq" customClass="DonutsViewController" customModule="hackNight_AR_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="hp4-hO-m6H">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sDV-NK-lIL">
+                                <rect key="frame" x="67" y="181" width="240" height="128"/>
+                            </arscnView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="sDV-NK-lIL" firstAttribute="width" secondItem="hp4-hO-m6H" secondAttribute="width" id="VbM-Og-shv"/>
+                            <constraint firstItem="sDV-NK-lIL" firstAttribute="centerX" secondItem="2Pg-fD-dVP" secondAttribute="centerX" id="VyZ-5m-S4T"/>
+                            <constraint firstItem="sDV-NK-lIL" firstAttribute="centerY" secondItem="2Pg-fD-dVP" secondAttribute="centerY" id="Y46-T2-Tp3"/>
+                            <constraint firstItem="sDV-NK-lIL" firstAttribute="height" secondItem="hp4-hO-m6H" secondAttribute="height" id="gUy-Ft-l6Q"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="2Pg-fD-dVP"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="9a5-eh-Wnh"/>
+                    <connections>
+                        <outlet property="sceneView" destination="sDV-NK-lIL" id="HUw-fJ-9ig"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Nrx-bv-yOW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2084" y="295"/>
+        </scene>
+        <!--Star Wars View Controller-->
+        <scene sceneID="oQ8-Er-p4m">
+            <objects>
+                <viewController id="bX7-4h-cPQ" customClass="StarWarsViewController" customModule="hackNight_AR_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="1Mj-xL-IGR">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="P0x-ac-t83">
+                                <rect key="frame" x="67" y="121" width="240" height="128"/>
+                            </arscnView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="P0x-ac-t83" firstAttribute="height" secondItem="1Mj-xL-IGR" secondAttribute="height" id="CG8-LE-Ohg"/>
+                            <constraint firstItem="P0x-ac-t83" firstAttribute="centerY" secondItem="t8m-VW-3Z7" secondAttribute="centerY" id="Pf3-WM-Ie0"/>
+                            <constraint firstItem="P0x-ac-t83" firstAttribute="width" secondItem="1Mj-xL-IGR" secondAttribute="width" id="UES-eO-guI"/>
+                            <constraint firstItem="P0x-ac-t83" firstAttribute="centerX" secondItem="t8m-VW-3Z7" secondAttribute="centerX" id="w7J-gc-5Ni"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="t8m-VW-3Z7"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="KvS-QA-3OY"/>
+                    <connections>
+                        <outlet property="sceneView" destination="P0x-ac-t83" id="gH0-QP-ZR5"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sRp-gQ-Jx5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2001" y="-491"/>
+        </scene>
+    </scenes>
+</document>
