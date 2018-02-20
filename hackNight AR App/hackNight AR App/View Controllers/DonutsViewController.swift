@@ -44,10 +44,6 @@ class DonutsViewController: UIViewController, ARSCNViewDelegate {
         guard let location = touches.first?.location(in: sceneView) else {
             return
         }
-
-        if let nodeExists = sceneView.scene.rootNode.childNode(withName: nodeName, recursively: true) {
-            nodeExists.removeFromParentNode()
-        }
         addNoteToSceneUsingVector(location: location)
     }
 

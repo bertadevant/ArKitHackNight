@@ -4,8 +4,8 @@
   <contributor>
    <authoring_tool>SceneKit Collada Exporter v1.0</authoring_tool>
   </contributor>
-  <created>2018-02-20T15:46:00Z</created>
-  <modified>2018-02-20T15:46:00Z</modified>
+  <created>2018-02-20T18:11:15Z</created>
+  <modified>2018-02-20T18:11:15Z</modified>
   <unit meter="0.025400"/>
   <up_axis>Z_UP</up_axis>
  </asset>
@@ -382,6 +382,7 @@
  <library_visual_scenes>
   <visual_scene id="scene30">
    <node id="donut" name="donut">
+    <matrix>0.01 0 0 0 0 0.01 0 0 0 0 0.01 0 0 0 0 1 </matrix>
     <node id="skp_camera_Last_Saved_SketchUp_View" name="skp_camera_Last_Saved_SketchUp_View">
      <matrix>-0.8987188 -0.2860516 0.332384 8.329293 0.4385255 -0.5862371 0.6811912 3.796512 -2.775558e-17 0.7579582 0.6523032 13.14742 0 0 0 1 </matrix>
      <instance_camera url="#ID1"/>

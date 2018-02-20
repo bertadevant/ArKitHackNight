@@ -13,10 +13,9 @@ import ARKit
 class EarthMoonViewController: UIViewController, ARSCNViewDelegate {
 
     @IBOutlet var sceneView: ARSCNView!
-    private let nodeName = "banana"
-    private let fileName = "banana-small"
+    private let fileName = "earth-moon"
     private let fileExtension = "dae"
-    private let filePath = ""
+    private let filePath = "Earth moon"
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -45,17 +44,17 @@ class EarthMoonViewController: UIViewController, ARSCNViewDelegate {
             return
         }
 
-        if let nodeExists = sceneView.scene.rootNode.childNode(withName: nodeName, recursively: true) {
+        if let nodeExists = sceneView.scene.rootNode.childNode(withName: "earth", recursively: true) {
             nodeExists.removeFromParentNode()
         }
         addNoteToSceneUsingVector(location: location)
     }
 
     private func addNoteToSceneUsingVector(location: CGPoint) {
-        guard let earthModel = createSceneNodeForAsset("", assetPath: "art.scnassets/\(filePath)/\(fileName).\(fileExtension)"),
-        let moonNode = createSceneNodeForAsset("", assetPath: "art.scnassets/\(filePath)/\(fileName).\(fileExtension)"),
-        let lightNode = createSceneNodeForAsset("", assetPath: "art.scnassets/\(filePath)/\(fileName).\(fileExtension)"),
-        let planeNode = createSceneNodeForAsset("", assetPath: "art.scnassets/\(filePath)/\(fileName).\(fileExtension)") else {
+        guard let earthModel = createSceneNodeForAsset("earth", assetPath: "art.scnassets/\(filePath)/\(fileName).\(fileExtension)"),
+        let moonNode = createSceneNodeForAsset("moon", assetPath: "art.scnassets/\(filePath)/\(fileName).\(fileExtension)"),
+        let lightNode = createSceneNodeForAsset("sun", assetPath: "art.scnassets/\(filePath)/\(fileName).\(fileExtension)"),
+        let planeNode = createSceneNodeForAsset("plane", assetPath: "art.scnassets/\(filePath)/\(fileName).\(fileExtension)") else {
             return
         }
 
@@ -74,7 +73,9 @@ class EarthMoonViewController: UIViewController, ARSCNViewDelegate {
         }
 
         if let hit = getHitResults(location: location, sceneView: sceneView, resultType: [.existingPlaneUsingExtent, .estimatedHorizontalPlane]) {
-            let pointTranslation = hit.worldTransform.translation
+            let rotate = simd_float4x4(SCNMatrix4MakeRotation(sceneView.session.currentFrame!.camera.eulerAngles.y, 0, 1, 0))
+            let finalTransform = simd_mul(hit.worldTransform, rotate)
+            let pointTranslation = finalTransform.translation
             let mainNode = getMainNodeFromElementNodes(nodes: [earthModel, moonNode, lightNode, planeNode])
             mainNode.position = SCNVector3(pointTranslation.x, pointTranslation.y, pointTranslation.z)
             sceneView.scene.rootNode.addChildNode(mainNode)
